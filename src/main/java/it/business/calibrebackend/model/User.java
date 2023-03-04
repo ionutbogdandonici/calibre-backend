@@ -1,0 +1,19 @@
+package it.business.calibrebackend.model;
+
+import lombok.Getter;
+import lombok.Setter;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection = "users")
+@Getter
+@Setter
+public class User {
+    @Id
+    private String ID;
+
+    private String name;
+    private String surname;
+    private String email;
+    private String password;
+}
